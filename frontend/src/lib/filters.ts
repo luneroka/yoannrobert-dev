@@ -1,9 +1,7 @@
-import type { ExplorerFilters, ProfileItem } from "@/data/types";
+import type { ExplorerFilters, Project } from "@/data/types";
 
-export function filterProfileItems(items: ProfileItem[], filters: ExplorerFilters): ProfileItem[] {
+export function filterProfileItems(items: Project[], filters: ExplorerFilters): Project[] {
   return items.filter((item) => {
-    const matchesType = filters.type ? item.type === filters.type : true;
-
     const matchesTracks =
       filters.tracks && filters.tracks.length > 0
         ? filters.tracks.some((track) => item.track.includes(track))
@@ -28,13 +26,6 @@ export function filterProfileItems(items: ProfileItem[], filters: ExplorerFilter
 
     const matchesFeatured = filters.featuredOnly ? item.featured === true : true;
 
-    return (
-      matchesType &&
-      matchesTracks &&
-      matchesDomains &&
-      matchesCompanies &&
-      matchesSkills &&
-      matchesFeatured
-    );
+    return matchesTracks && matchesDomains && matchesCompanies && matchesSkills && matchesFeatured;
   });
 }

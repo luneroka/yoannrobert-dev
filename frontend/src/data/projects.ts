@@ -1,4 +1,4 @@
-import type { ProfileItem } from "./types";
+import type { Project } from "./types";
 
 export const projects = [
   {
@@ -56,4 +56,4 @@ export const projects = [
 
     featured: true,
   },
-] satisfies ProfileItem[];
+] satisfies Project[];

@@ -83,7 +83,7 @@ export interface Metric {
   confidence: MetricConfidence;
 }
 
-export interface ProfileItem {
+export interface Project {
   id: string;
 
   title: LocalizedString;
