@@ -1,3 +1,5 @@
+import type { ElementType } from 'react';
+
 /*
 |--------------------------------------------------------------------------
 | Core Entity Types
@@ -22,14 +24,34 @@ export type Domain =
 export type Company = 'Amazon' | 'Lidl' | 'Solo';
 
 export type SkillId =
+  | 'javascript'
   | 'typescript'
   | 'react'
+  | 'tailwindcss'
+  | 'nodejs'
+  | 'nextjs'
   | 'python'
   | 'fastapi'
+  | 'flask'
+  | 'mongodb'
   | 'postgresql'
   | 'sql'
+  | 'excel'
+  | 'vba'
+  | 'power-query'
+  | 'tableau'
   | 'power-bi'
+  | 'git'
   | 'docker';
+
+export type SkillCategory =
+  | 'frontend'
+  | 'backend'
+  | 'data'
+  | 'database'
+  | 'tooling';
+
+export type SkillLevel = 'comfortable' | 'working' | 'learning';
 
 /*
 |--------------------------------------------------------------------------
@@ -53,6 +75,16 @@ export type MetricConfidence = 'measured' | 'estimated' | 'qualitative';
 | Shared Interfaces
 |--------------------------------------------------------------------------
 */
+
+export interface Skill {
+  id: SkillId;
+  label: LocalizedString;
+  icon: ElementType<{ className?: string }>;
+  category: SkillCategory;
+  level: SkillLevel;
+  featured?: boolean;
+  showAsFilter?: boolean;
+}
 
 export interface Metric {
   id: string;
