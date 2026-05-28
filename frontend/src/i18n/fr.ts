@@ -67,7 +67,7 @@ export const fr = {
       contextMetric: "Métrique contexte",
     },
     charts: {
-      impactOverview: "Vue d'ensemble de l'impact",
+      impactOverview: "Projets par heures investies",
       skillCoverage: "Couverture des compétences",
       timeline: "Derniers projets",
     },

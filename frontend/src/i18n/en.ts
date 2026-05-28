@@ -67,7 +67,7 @@ export const en = {
       contextMetric: "Context Metric",
     },
     charts: {
-      impactOverview: "Project impact overview",
+      impactOverview: "Projects by hours invested",
       skillCoverage: "Skill coverage",
       timeline: "Latest projects",
     },
