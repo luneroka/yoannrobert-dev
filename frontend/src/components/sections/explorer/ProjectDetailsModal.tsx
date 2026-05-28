@@ -397,8 +397,8 @@ const ProjectDetailsModal = ({ project, onClose }: ProjectDetailsModalProps) => 
                       accent
                     />
                     <DetailStat
-                      label={copy.technologies}
-                      value={formatNumber(project.technologiesCount, locale)}
+                      label={copy.skillsUsed}
+                      value={formatNumber(project.skills.length, locale)}
                       icon={Cpu}
                       accent
                     />
