@@ -27,6 +27,7 @@ type ImpactTooltip = {
 };
 
 const impactBarMinOpacity = 0.35;
+const trackOrder: Track[] = ["dev", "data"];
 
 function getPercentage(value: number, total: number) {
   if (total === 0) {
@@ -48,19 +49,34 @@ function getImpactBarColor(index: number, totalBars: number) {
 }
 
 function getTechnologyGroupsByTrack(projects: EnrichedProject[]) {
-  const technologyGroups = projects.reduce<Record<Track, Set<TechnologyId>>>(
-    (groups, project) => {
-      project.track.forEach((track) => {
-        project.technologies.forEach((technology) => groups[track].add(technology));
+  const technologyTrackCounts = projects.reduce(
+    (counts, project) => {
+      project.technologies.forEach((technology) => {
+        const trackCounts = counts.get(technology) ?? { dev: 0, data: 0 };
+
+        project.track.forEach((track) => {
+          trackCounts[track] += 1;
+        });
+
+        counts.set(technology, trackCounts);
       });
 
-      return groups;
+      return counts;
     },
-    {
-      dev: new Set<TechnologyId>(),
-      data: new Set<TechnologyId>(),
-    },
+    new Map<TechnologyId, Record<Track, number>>(),
   );
+  const technologyGroups: Record<Track, Set<TechnologyId>> = {
+    dev: new Set<TechnologyId>(),
+    data: new Set<TechnologyId>(),
+  };
+
+  technologyTrackCounts.forEach((trackCounts, technology) => {
+    const assignedTrack = trackOrder.reduce((currentTrack, nextTrack) =>
+      trackCounts[nextTrack] > trackCounts[currentTrack] ? nextTrack : currentTrack,
+    );
+
+    technologyGroups[assignedTrack].add(technology);
+  });
 
   return (Object.entries(technologyGroups) as Array<[Track, Set<TechnologyId>]>)
     .map(([track, technologySet]) => ({
