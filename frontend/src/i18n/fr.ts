@@ -32,7 +32,6 @@ export const fr = {
   nav: {
     home: "Accueil",
     explorer: "Explorateur",
-    "case-studies": "Cas d'étude",
     skills: "Compétences",
     contact: "Contact",
   },
@@ -73,6 +72,71 @@ export const fr = {
       impactOverview: "Projets par heures investies",
       technologiesCovered: "Technologies couvertes",
       timeline: "Derniers projets",
+    },
+  },
+
+  skillsExpertise: {
+    title: "Compétences & expertise",
+    intro:
+      "Une synthèse des compétences démontrées à travers mes projets, entre développement full-stack, analyse de données et logique produit orientée métier.",
+    labels: {
+      capabilities: "Capacités",
+      coreTools: "Outils clés",
+      featuredProjects: "Projets associés",
+      industries: "Secteurs",
+      projectTypes: "Types de projets",
+    },
+    projectCountLabel: "projets cartographiés",
+    emptyState: "Aucune donnée projet associée pour le moment.",
+    cards: {
+      frontend: {
+        title: "Développement Frontend",
+        description:
+          "Créer des interfaces responsive, propres et maintenables pour des produits orientés utilisateurs.",
+        capabilities: [
+          "Architecture de composants React",
+          "Types et interfaces TypeScript",
+          "Layouts de dashboards responsive",
+          "Filtrage et interactions côté client",
+          "Interfaces conçues pour le multilingue",
+        ],
+      },
+      backend: {
+        title: "Ingénierie Backend",
+        description:
+          "Concevoir des APIs, des modèles relationnels et une logique métier pour des applications structurées.",
+        capabilities: [
+          "Conception d'API REST",
+          "Modélisation relationnelle",
+          "Modélisation de workflows métier",
+          "Usage de PostgreSQL et SQLAlchemy",
+          "Environnements de développement Docker",
+        ],
+      },
+      data: {
+        title: "Data & Analytics",
+        description:
+          "Transformer des données opérationnelles en tableaux de bord, KPIs et outils d’aide à la décision.",
+        capabilities: [
+          "Analyse basée sur SQL",
+          "Suivi de KPIs et reporting",
+          "Dashboarding Power BI & Tableau",
+          "Modélisation de données",
+          "Analyse de performance opérationnelle",
+        ],
+      },
+      domain: {
+        title: "Expertise métier",
+        description:
+          "Appliquer la technique à des contextes business, types de projets et environnements opérationnels concrets.",
+        capabilities: [
+          "Compréhension des processus métier",
+          "Workflows opérationnels",
+          "Outils internes",
+          "Logique SaaS et produit",
+          "Aide à la décision pilotée par la donnée",
+        ],
+      },
     },
   },
 

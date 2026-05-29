@@ -32,7 +32,6 @@ export const en = {
   nav: {
     home: "Home",
     explorer: "Explorer",
-    "case-studies": "Case Studies",
     skills: "Skills",
     contact: "Contact",
   },
@@ -73,6 +72,71 @@ export const en = {
       impactOverview: "Projects by hours invested",
       technologiesCovered: "Technologies covered",
       timeline: "Latest projects",
+    },
+  },
+
+  skillsExpertise: {
+    title: "Skills & Expertise",
+    intro:
+      "A compact view of the capabilities demonstrated across my projects, combining full-stack development, data analysis, and business-oriented product thinking.",
+    labels: {
+      capabilities: "Capabilities",
+      coreTools: "Core tools",
+      featuredProjects: "Featured projects",
+      industries: "Industries",
+      projectTypes: "Project types",
+    },
+    projectCountLabel: "projects mapped",
+    emptyState: "No matching project data yet.",
+    cards: {
+      frontend: {
+        title: "Frontend Development",
+        description:
+          "Building responsive, typed, and maintainable user interfaces for data-driven products.",
+        capabilities: [
+          "React component architecture",
+          "Type-safe UI with TypeScript",
+          "Responsive dashboard layouts",
+          "Client-side filtering and interactions",
+          "Localization-ready interfaces",
+        ],
+      },
+      backend: {
+        title: "Backend Engineering",
+        description:
+          "Designing APIs, relational data models, and business logic for structured applications.",
+        capabilities: [
+          "REST API design",
+          "Relational data modeling",
+          "Business workflow modeling",
+          "PostgreSQL and SQLAlchemy usage",
+          "Docker-based development environments",
+        ],
+      },
+      data: {
+        title: "Data & Analytics",
+        description:
+          "Transforming operational data into dashboards, KPIs, and decision-support tools.",
+        capabilities: [
+          "SQL-based analysis",
+          "KPI tracking and reporting",
+          "Power BI & Tableau dashboarding",
+          "Data modeling",
+          "Operational performance analysis",
+        ],
+      },
+      domain: {
+        title: "Domain Expertise",
+        description:
+          "Applying technical work to concrete business contexts, project types, and operational environments.",
+        capabilities: [
+          "Business process understanding",
+          "Operational workflows",
+          "Internal tools",
+          "SaaS/product thinking",
+          "Data-driven decision support",
+        ],
+      },
     },
   },
 
