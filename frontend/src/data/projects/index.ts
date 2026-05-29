@@ -6,6 +6,7 @@ import { staffpicks } from "./staffpicks";
 import { eCommerceDataAnalysis } from "./eCommerceDataAnalysis";
 import { siteVitrineAguera } from "./siteVitrineAguera";
 import { maBibli } from "./maBibli";
+import { helpInvest } from "./helpInvest";
 
 export const projects = [
   budgetConstruction,
@@ -14,4 +15,5 @@ export const projects = [
   eCommerceDataAnalysis,
   siteVitrineAguera,
   maBibli,
+  helpInvest,
 ] satisfies Project[];

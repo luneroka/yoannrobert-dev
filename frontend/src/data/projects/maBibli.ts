@@ -41,13 +41,13 @@ export const maBibli = {
     context: {
       type: "other",
       label: {
-        en: "Core Features",
-        fr: "Fonctionnalités Clés",
+        en: "Active users",
+        fr: "Utilisateurs actifs",
       },
-      value: 8,
+      value: 3,
       unit: {
-        en: "features",
-        fr: "fonctionnalités",
+        en: "",
+        fr: "",
       },
     },
   },
