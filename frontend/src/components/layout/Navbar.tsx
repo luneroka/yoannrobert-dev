@@ -107,7 +107,11 @@ export default function Navbar() {
             whileHover={{ scale: 1.04 }}
             whileTap={{ scale: 0.96 }}
           >
-            YR
+            <img
+              src="/profile/avatar.png"
+              alt="Yoann Robert"
+              className="h-9 w-9 rounded-full object-cover ring-1 ring-border"
+            />
           </motion.a>
         </div>
 
