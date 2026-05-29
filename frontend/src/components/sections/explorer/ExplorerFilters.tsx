@@ -58,9 +58,10 @@ const ExplorerFilters = ({
   const dateBounds = getDateBounds(projects);
   const dateFrom = activeFilters.dateFrom ?? dateBounds?.min;
   const dateTo = activeFilters.dateTo ?? dateBounds?.max;
-  const isDateFiltered =
+  const allDatesActive =
     dateBounds !== null &&
-    (activeFilters.dateFrom !== undefined || activeFilters.dateTo !== undefined);
+    activeFilters.dateFrom === dateBounds.min &&
+    activeFilters.dateTo === dateBounds.max;
   const explorerFiltersCopy = copy.explorer.filters;
 
   function toggleTrack(track: Track) {
@@ -192,11 +193,15 @@ const ExplorerFilters = ({
   }
 
   function toggleAllDates() {
-    if (!dateBounds || !isDateFiltered) {
+    if (!dateBounds) {
       return;
     }
 
-    onFiltersChange(resetDateFilter(activeFilters));
+    onFiltersChange(
+      allDatesActive
+        ? resetDateFilter(activeFilters)
+        : updateDateFilter(activeFilters, dateBounds.min, dateBounds.max),
+    );
   }
 
   return (
@@ -216,7 +221,7 @@ const ExplorerFilters = ({
             allLabel={explorerFiltersCopy.all}
             dateFromLabel={explorerFiltersCopy.dateFrom}
             dateToLabel={explorerFiltersCopy.dateTo}
-            isFiltered={isDateFiltered}
+            allActive={allDatesActive}
             locale={locale}
             title={explorerFiltersCopy.date}
             bounds={dateBounds}

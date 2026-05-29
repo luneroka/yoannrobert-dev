@@ -8,7 +8,7 @@ type ExplorerDateRangeSliderProps = {
   allLabel: string;
   dateFromLabel: string;
   dateToLabel: string;
-  isFiltered: boolean;
+  allActive: boolean;
   locale: string;
   title: string;
   bounds: ProjectDateBounds;
@@ -19,11 +19,15 @@ type ExplorerDateRangeSliderProps = {
   onUpdateDateTo: (value: number) => void;
 };
 
+const inactiveClass =
+  "border-border bg-background text-muted-foreground hover:border-primary/35 hover:text-primary";
+const activeClass = "border-primary/40 bg-primary/10 text-primary";
+
 const ExplorerDateRangeSlider = ({
   allLabel,
   dateFromLabel,
   dateToLabel,
-  isFiltered,
+  allActive,
   locale,
   title,
   bounds,
@@ -45,11 +49,9 @@ const ExplorerDateRangeSlider = ({
         <button
           type="button"
           onClick={onReset}
-          aria-pressed={!isFiltered}
+          aria-pressed={allActive}
           className={`inline-flex min-h-7 cursor-pointer items-center rounded-full border px-2.5 py-1 font-body text-xs font-semibold transition-smooth ${
-            !isFiltered
-              ? "border-primary/40 bg-primary/10 text-primary"
-              : "border-border bg-background text-muted-foreground hover:border-primary/35 hover:text-primary"
+            allActive ? activeClass : inactiveClass
           }`}
         >
           {allLabel}
