@@ -24,7 +24,6 @@ export const portfolioRevamp = {
   metrics: {
     hoursInvested: 60,
     context: {
-      type: "other",
       label: {
         en: "Filter dimensions",
         fr: "Dimensions de filtre",

@@ -39,7 +39,6 @@ export const maBibli = {
   metrics: {
     hoursInvested: 540,
     context: {
-      type: "other",
       label: {
         en: "Active users",
         fr: "Utilisateurs actifs",

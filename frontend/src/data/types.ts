@@ -62,24 +62,13 @@ export type TechnologyCategory = "frontend" | "backend" | "data" | "database" | 
 
 export type SkillCategory = "data" | "backend" | "frontend" | "business-analysis" | "operations";
 
-export type ProficiencyLevel = "comfortable" | "working" | "learning";
-
 /*
 |--------------------------------------------------------------------------
 | Metrics
 |--------------------------------------------------------------------------
 */
 
-export type ContextMetricType =
-  | "budget_managed"
-  | "records_analyzed"
-  | "reports_built"
-  | "users_impacted"
-  | "performance_gain"
-  | "other";
-
 export interface ContextMetric {
-  type: ContextMetricType;
   label: LocalizedString;
   value: number;
   unit?: LocalizedString;
@@ -113,7 +102,6 @@ export interface Technology {
   label: LocalizedString;
   icon: ElementType<{ className?: string }>;
   category: TechnologyCategory;
-  level: ProficiencyLevel;
   featured?: boolean;
   showAsFilter?: boolean;
 }
@@ -122,7 +110,6 @@ export interface Skill {
   id: SkillId;
   label: LocalizedString;
   category: SkillCategory;
-  level: ProficiencyLevel;
   featured?: boolean;
   showAsFilter?: boolean;
 }

@@ -26,7 +26,6 @@ export const eCommerceDataAnalysis = {
   metrics: {
     hoursInvested: 20,
     context: {
-      type: "budget_managed",
       label: {
         en: "Revenue Analyzed",
         fr: "Chiffre d'Affaires Analysé",

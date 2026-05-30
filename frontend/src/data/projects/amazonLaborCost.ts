@@ -32,7 +32,6 @@ export const amazonLaborCost = {
   metrics: {
     hoursInvested: 480,
     context: {
-      type: "performance_gain",
       label: {
         en: "Cost savings delivered",
         fr: "Économies réalisées",

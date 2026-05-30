@@ -49,7 +49,6 @@ export const staffpicks = {
   metrics: {
     hoursInvested: 720,
     context: {
-      type: "users_impacted",
       label: {
         en: "Unique visitors",
         fr: "Visiteurs uniques",

@@ -29,7 +29,6 @@ export const siteVitrineAguera = {
   metrics: {
     hoursInvested: 50,
     context: {
-      type: "performance_gain",
       label: {
         en: "Lighthouse Performance",
         fr: "Performance Lighthouse",

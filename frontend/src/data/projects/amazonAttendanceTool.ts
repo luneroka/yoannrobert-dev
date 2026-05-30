@@ -31,7 +31,6 @@ export const amazonAttendanceTool = {
   metrics: {
     hoursInvested: 160,
     context: {
-      type: "performance_gain",
       label: {
         en: "Unplanned absence reduction",
         fr: "Réduction de l'absence non planifiée",

@@ -29,7 +29,6 @@ export const budgetConstructionExcel = {
   metrics: {
     hoursInvested: 80,
     context: {
-      type: "performance_gain",
       label: {
         en: "Performance Gained",
         fr: "Gain de Performance",

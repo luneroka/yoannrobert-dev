@@ -26,7 +26,6 @@ export const technologies: Technology[] = [
     label: { en: "JavaScript", fr: "JavaScript" },
     icon: SiJavascript,
     category: "frontend",
-    level: "comfortable",
     featured: true,
     showAsFilter: true,
   },
@@ -35,7 +34,6 @@ export const technologies: Technology[] = [
     label: { en: "TypeScript", fr: "TypeScript" },
     icon: SiTypescript,
     category: "frontend",
-    level: "working",
     featured: true,
     showAsFilter: true,
   },
@@ -44,7 +42,6 @@ export const technologies: Technology[] = [
     label: { en: "React", fr: "React" },
     icon: SiReact,
     category: "frontend",
-    level: "comfortable",
     featured: true,
     showAsFilter: true,
   },
@@ -53,7 +50,6 @@ export const technologies: Technology[] = [
     label: { en: "Tailwind CSS", fr: "Tailwind CSS" },
     icon: SiTailwindcss,
     category: "frontend",
-    level: "working",
     showAsFilter: true,
   },
   {
@@ -61,7 +57,6 @@ export const technologies: Technology[] = [
     label: { en: "Node.js", fr: "Node.js" },
     icon: SiNodedotjs,
     category: "backend",
-    level: "working",
     showAsFilter: true,
   },
   {
@@ -69,7 +64,6 @@ export const technologies: Technology[] = [
     label: { en: "Next.js", fr: "Next.js" },
     icon: SiNextdotjs,
     category: "frontend",
-    level: "learning",
     showAsFilter: true,
   },
   {
@@ -77,7 +71,6 @@ export const technologies: Technology[] = [
     label: { en: "Python", fr: "Python" },
     icon: SiPython,
     category: "backend",
-    level: "comfortable",
     featured: true,
     showAsFilter: true,
   },
@@ -86,7 +79,6 @@ export const technologies: Technology[] = [
     label: { en: "FastAPI", fr: "FastAPI" },
     icon: SiFastapi,
     category: "backend",
-    level: "working",
     featured: true,
     showAsFilter: true,
   },
@@ -95,7 +87,6 @@ export const technologies: Technology[] = [
     label: { en: "Flask", fr: "Flask" },
     icon: SiFlask,
     category: "backend",
-    level: "working",
     showAsFilter: true,
   },
   {
@@ -103,7 +94,6 @@ export const technologies: Technology[] = [
     label: { en: "PostgreSQL", fr: "PostgreSQL" },
     icon: SiPostgresql,
     category: "database",
-    level: "working",
     featured: true,
     showAsFilter: true,
   },
@@ -112,7 +102,6 @@ export const technologies: Technology[] = [
     label: { en: "MongoDB", fr: "MongoDB" },
     icon: SiMongodb,
     category: "database",
-    level: "working",
     showAsFilter: true,
   },
   {
@@ -120,7 +109,6 @@ export const technologies: Technology[] = [
     label: { en: "SQL", fr: "SQL" },
     icon: Database,
     category: "data",
-    level: "comfortable",
     featured: true,
     showAsFilter: true,
   },
@@ -129,7 +117,6 @@ export const technologies: Technology[] = [
     label: { en: "Excel", fr: "Excel" },
     icon: PiMicrosoftExcelLogoFill,
     category: "data",
-    level: "comfortable",
     showAsFilter: true,
   },
   {
@@ -137,7 +124,6 @@ export const technologies: Technology[] = [
     label: { en: "VBA", fr: "VBA" },
     icon: DiVisualstudio,
     category: "data",
-    level: "working",
     showAsFilter: true,
   },
   {
@@ -145,7 +131,6 @@ export const technologies: Technology[] = [
     label: { en: "Power Query", fr: "Power Query" },
     icon: Database,
     category: "data",
-    level: "working",
     showAsFilter: true,
   },
   {
@@ -153,7 +138,6 @@ export const technologies: Technology[] = [
     label: { en: "Minitab", fr: "Minitab" },
     icon: BarChart3,
     category: "data",
-    level: "working",
     showAsFilter: false,
   },
   {
@@ -161,7 +145,6 @@ export const technologies: Technology[] = [
     label: { en: "Tableau", fr: "Tableau" },
     icon: IoLogoTableau,
     category: "data",
-    level: "working",
     showAsFilter: true,
   },
   {
@@ -169,7 +152,6 @@ export const technologies: Technology[] = [
     label: { en: "Power BI", fr: "Power BI" },
     icon: BarChart3,
     category: "data",
-    level: "learning",
     showAsFilter: true,
   },
   {
@@ -177,7 +159,6 @@ export const technologies: Technology[] = [
     label: { en: "Git", fr: "Git" },
     icon: SiGit,
     category: "tooling",
-    level: "comfortable",
     showAsFilter: false,
   },
   {
@@ -185,7 +166,6 @@ export const technologies: Technology[] = [
     label: { en: "Docker", fr: "Docker" },
     icon: SiDocker,
     category: "tooling",
-    level: "working",
     showAsFilter: true,
   },
 ];

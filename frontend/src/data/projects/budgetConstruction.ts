@@ -24,7 +24,6 @@ export const budgetConstruction = {
   metrics: {
     hoursInvested: 160,
     context: {
-      type: "users_impacted",
       label: {
         en: "Users Impacted",
         fr: "Utilisateurs Impactés",

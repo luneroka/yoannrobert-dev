@@ -30,7 +30,6 @@ export const amazonPickingPerformance = {
   metrics: {
     hoursInvested: 240,
     context: {
-      type: "performance_gain",
       label: {
         en: "Observed productivity increase",
         fr: "Hausse de productivité observée",

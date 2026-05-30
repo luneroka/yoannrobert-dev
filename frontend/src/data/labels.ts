@@ -1,6 +1,5 @@
 import type {
   Company,
-  ContextMetricType,
   Industry,
   LocalizedString,
   ProductType,
@@ -31,12 +30,3 @@ export const companyLabels = {
   Lidl: { en: "Lidl", fr: "Lidl" },
   Solo: { en: "Solo projects", fr: "Projets solo" },
 } satisfies Record<Company, LocalizedString>;
-
-export const contextMetricTypeLabels = {
-  budget_managed: { en: "Budget managed", fr: "Budget géré" },
-  records_analyzed: { en: "Records analyzed", fr: "Enregistrements analysés" },
-  reports_built: { en: "Reports built", fr: "Rapports créés" },
-  users_impacted: { en: "Users impacted", fr: "Utilisateurs impactés" },
-  performance_gain: { en: "Performance gain", fr: "Gain de performance" },
-  other: { en: "Other", fr: "Autre" },
-} satisfies Record<ContextMetricType, LocalizedString>;

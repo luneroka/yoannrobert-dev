@@ -37,7 +37,6 @@ export const helpInvest = {
   metrics: {
     hoursInvested: 360,
     context: {
-      type: "other",
       label: {
         en: "Certfificate obtained",
         fr: "Certification obtenue",
