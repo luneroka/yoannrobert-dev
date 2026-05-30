@@ -1,12 +1,10 @@
-import {
-  industryLabels,
-  productTypeLabels,
-  skillLabels,
-  technologyLabels,
-} from "@/data/labels";
+import { industryLabels, productTypeLabels } from "@/data/labels";
+import { skills } from "@/data/skills";
+import { technologies } from "@/data/technologies";
 import type {
   Industry,
   Locale,
+  LocalizedString,
   ProductType,
   Project,
   SkillId,
@@ -32,6 +30,10 @@ export type SkillsExpertiseCardData = {
 
 const maxTools = 6;
 const maxProjects = 8;
+const technologyLabelById = new Map(
+  technologies.map((technology) => [technology.id, technology.label]),
+);
+const skillLabelById = new Map(skills.map((skill) => [skill.id, skill.label]));
 
 const frontendTechnologies: TechnologyId[] = [
   "typescript",
@@ -130,7 +132,7 @@ function getTechnologyLabels(
 
   return preferredTechnologies
     .filter((technologyId) => usedTechnologies.has(technologyId))
-    .map((technologyId) => translate(technologyLabels[technologyId], locale, technologyId))
+    .map((technologyId) => translate(technologyLabelById.get(technologyId), locale, technologyId))
     .slice(0, maxTools);
 }
 
@@ -144,7 +146,7 @@ function getProjectProof(projects: readonly Project[], locale: Locale) {
 function getTranslatedUniqueValues<T extends Industry | ProductType>(
   projects: readonly Project[],
   getValue: (project: Project) => T,
-  labels: Record<T, { en: string; fr: string }>,
+  labels: Record<T, LocalizedString>,
   locale: Locale,
 ) {
   return dedupe(projects.map(getValue)).map((value) => translate(labels[value], locale, value));
@@ -171,7 +173,7 @@ function createCapabilityCard(
           .filter((skillId) =>
             matchingProjects.some((project) => project.skills.includes(skillId)),
           )
-          .map((skillId) => translate(skillLabels[skillId], locale, skillId))
+          .map((skillId) => translate(skillLabelById.get(skillId), locale, skillId))
           .slice(0, maxTools);
 
   return {
