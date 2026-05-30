@@ -47,13 +47,15 @@ export const en = {
   explorer: {
     eyebrow: "PROJECT EXPLORER",
     title: "Interactive Projects Explorer",
-    subtitle: "Explore my projects, skills and experience like a dataset.",
-    description:
-      "A static dashboard view of the systems I have built, the tools behind them, and the business context they were designed for.",
+    subtitle:
+      "Explore projects like an analytics dashboard: filter, compare, and highlight the experiences most relevant to your interests.",
     emptyState: "No profile item matches your filters.",
     filters: {
       title: "Filters",
       status: "Click to refine",
+      helpLabel: "How to use filters",
+      helpTooltip:
+        "Filter projects to explore different technologies, skills, and domains.\nThe dashboard updates automatically.\nClick any project to view more details.",
       all: "All",
       date: "Date",
       dateFrom: "Start date",
@@ -67,6 +69,8 @@ export const en = {
     },
     query: {
       label: "SQL preview",
+      generatedHint: "Generated from filters",
+      readOnlyLabel: "Read-only SQL query generated from the active filters",
       statement: "SELECT * FROM projects WHERE focus IN ('Dev', 'Data');",
     },
     kpis: {

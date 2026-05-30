@@ -47,9 +47,8 @@ export const fr = {
   explorer: {
     eyebrow: "EXPLORATEUR DE PROJETS",
     title: "Explorateur de projets interactif",
-    subtitle: "Explorez mes projets, compétences et expériences comme un jeu de données.",
-    description:
-      "Une vue tableau de bord statique des systèmes construits, des outils utilisés et du contexte métier auquel ils répondent.",
+    subtitle:
+      "Explorez mes projets comme un tableau de bord analytique : filtrez, comparez et mettez en évidence les expériences les plus pertinentes.",
     emptyState: "Aucun élément ne correspond aux filtres.",
     filters: {
       title: "Filtres",
@@ -67,6 +66,8 @@ export const fr = {
     },
     query: {
       label: "Aperçu SQL",
+      generatedHint: "Généré depuis les filtres",
+      readOnlyLabel: "Requête SQL en lecture seule générée depuis les filtres actifs",
       statement: "SELECT * FROM projects WHERE focus IN ('Dev', 'Data');",
     },
     kpis: {

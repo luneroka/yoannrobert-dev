@@ -22,7 +22,7 @@ const ExplorerHeader = () => {
       </h2>
 
       <p className="mx-auto mt-4 max-w-2xl font-body text-base leading-7 text-muted-foreground sm:text-lg">
-        {copy.explorer.description}
+        {copy.explorer.subtitle}
       </p>
     </motion.div>
   );
