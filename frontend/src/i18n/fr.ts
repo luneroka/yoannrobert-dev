@@ -15,7 +15,7 @@ export const fr = {
         label: "Années en environnements opérationnels",
       },
       {
-        value: "3",
+        value: "4",
         label: "Industries explorées",
       },
       {
@@ -53,6 +53,12 @@ export const fr = {
     filters: {
       title: "Filtres",
       status: "Cliquez pour affiner",
+      helpLabel: "Comment utiliser les filtres",
+      helpSteps: [
+        "Utilisez les filtres selon les critères qui vous intéressent",
+        "Le tableau de bord se met à jour automatiquement",
+        "Cliquez sur un projet pour en savoir plus",
+      ],
       all: "Tout",
       date: "Date",
       dateFrom: "Date de début",

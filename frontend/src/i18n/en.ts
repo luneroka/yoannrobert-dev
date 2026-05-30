@@ -15,7 +15,7 @@ export const en = {
         label: "Years in operational environments",
       },
       {
-        value: "3",
+        value: "4",
         label: "Business industries explored",
       },
       {
@@ -54,8 +54,11 @@ export const en = {
       title: "Filters",
       status: "Click to refine",
       helpLabel: "How to use filters",
-      helpTooltip:
-        "Filter projects to explore different technologies, skills, and domains.\nThe dashboard updates automatically.\nClick any project to view more details.",
+      helpSteps: [
+        "Filter projects based on your interests",
+        "The dashboard updates automatically",
+        "Click a project to learn more",
+      ],
       all: "All",
       date: "Date",
       dateFrom: "Start date",

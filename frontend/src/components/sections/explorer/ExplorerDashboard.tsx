@@ -63,7 +63,7 @@ const ExplorerDashboard = () => {
 
   return (
     <motion.div
-      className="grid overflow-hidden rounded-lg border border-border bg-card/90 shadow-soft backdrop-blur lg:grid-cols-[220px_minmax(0,1fr)]"
+      className="grid overflow-visible rounded-lg border border-border bg-card/90 shadow-soft backdrop-blur lg:grid-cols-[220px_minmax(0,1fr)]"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}

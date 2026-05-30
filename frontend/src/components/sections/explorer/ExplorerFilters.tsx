@@ -1,3 +1,5 @@
+import { Info } from "lucide-react";
+
 import { useLanguage } from "@/context/LanguageContext";
 import { companyLabels, trackLabels } from "@/data/labels";
 import { skills } from "@/data/skills";
@@ -207,9 +209,37 @@ const ExplorerFilters = ({
   return (
     <aside className="border-b border-border bg-secondary/30 p-4 lg:border-b-0 lg:border-r">
       <div className="mb-5">
-        <p className="font-heading text-base font-bold text-foreground">
-          {explorerFiltersCopy.title}
-        </p>
+        <div className="flex items-center justify-between gap-3">
+          <p className="font-heading text-base font-bold text-foreground">
+            {explorerFiltersCopy.title}
+          </p>
+          <div className="group relative">
+            <button
+              type="button"
+              aria-label={explorerFiltersCopy.helpLabel}
+              aria-describedby="explorer-filters-tooltip"
+              className="inline-flex h-7 w-7 cursor-help items-center justify-center rounded-full border border-border bg-background text-muted-foreground transition-smooth hover:border-accent/40 hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+            >
+              <Info className="h-3.5 w-3.5" aria-hidden="true" />
+            </button>
+            <span
+              id="explorer-filters-tooltip"
+              role="tooltip"
+              className="pointer-events-none absolute left-0 top-full z-50 mt-2 w-80 max-w-[calc(100vw-2rem)] rounded-md border border-border bg-popover px-3 py-2 font-body text-xs leading-5 text-popover-foreground opacity-0 shadow-soft transition-opacity group-focus-within:opacity-100 group-hover:opacity-100 sm:w-96"
+            >
+              <span className="flex flex-col gap-1.5">
+                {explorerFiltersCopy.helpSteps.map((step, index) => (
+                  <span key={step} className="flex items-start gap-2">
+                    <span className="mt-0.5 inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-accent font-body text-[0.65rem] font-bold leading-none text-accent-foreground">
+                      {index + 1}
+                    </span>
+                    <span>{step}</span>
+                  </span>
+                ))}
+              </span>
+            </span>
+          </div>
+        </div>
         <p className="mt-1 font-body text-xs text-muted-foreground">
           {explorerFiltersCopy.status}
         </p>
